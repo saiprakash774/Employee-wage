@@ -33,7 +33,7 @@ do
         getWorkHrs $empCheck
         totalEmpHrs=$(($totalEmpHrs + $empHrs))
         dailyWages[$totalWorkingDays]=$(($empHrs*$EMP_RATE_PER_HR))
-        echo "daily wages for $totalWorkingDays" $(($empHrs*$EMP_RATE_PER_HR))
+        echo "daily wages for day $totalWorkingDays " $(($empHrs*$EMP_RATE_PER_HR))
 done
 
 totalSalary="$( getEmpWage $totalEmpHrs )"
