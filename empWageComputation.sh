@@ -1,9 +1,5 @@
 #!/bin/bash -x
-Attendance=$((RANDOM%2));
-
-if [ $Attendance = 1 ]
-then
-        echo "Present"
-else
-        echo "Absent"
-fi
+wageperhr=20;
+fulldayhr=8;
+EmployeeWage=$(( $wageperhr * $fulldayhr ))
+echo "The daily employee wage is :" $EmployeeWage "rupees"
