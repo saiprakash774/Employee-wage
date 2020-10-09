@@ -1,5 +1,12 @@
 #!/bin/bash -x
+isPartTime=1;
+isFullTime=2;
 wageperhr=20;
-fulldayhr=8;
-EmployeeWage=$(( $wageperhr * $fulldayhr ))
-echo "The daily employee wage is :" $EmployeeWage "rupees"
+randomCheck=$(( RANDOM%2 +1 ))
+if [ $isFullTime = $randomCheck ]
+then
+        empHrs=12;
+else
+        empHrs=8;
+fi
+salary=$(($wageperhr*$empHrs));
